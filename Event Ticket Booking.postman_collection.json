@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "f9e918ae-2a80-49ea-83c2-681ef992a675",
+		"name": "Event Ticket Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17324168",
+		"_collection_link": "https://restless-star-229417.postman.co/workspace/gfdfgd~a994e583-6280-4845-a640-d63af102901c/collection/17324168-f9e918ae-2a80-49ea-83c2-681ef992a675?action=share&source=collection_link&creator=17324168"
+	},
+	"item": [
+		{
+			"name": "Event List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/events/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event Details list",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/events/details/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"details",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seat-lock",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "event_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "seat_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/seat-lock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"seat-lock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking ticket",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "event_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "seat_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/book-ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"book-ticket"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
